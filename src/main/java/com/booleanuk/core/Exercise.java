@@ -39,58 +39,32 @@ public class Exercise extends ExerciseBase {
         return list;
     }
 
-    /*
-        TODO: 1. Create a method named getSecondNumber that returns a whole number. It must return the
-           second number contained in the list that is returned from getFavouriteNumbers
-     */
+    public int getSecondNumber() {
+        ArrayList<Integer> list = getFavouriteNumbers();
+        return list.get(1);
+    }
+
+    public ArrayList<Integer> multiply(ArrayList<Integer> list, int number) {
+        list.replaceAll(integer -> integer * number);
+        return list;
+    }
 
 
+    public boolean isEmpty(ArrayList<String> list) {
+        return list.isEmpty();
+    }
 
-    /*
-        TODO: 2. Create a method named multiply that accepts two parameters in this order:
-         - A list of whole numbers
-         - A whole number
-         The method must multiply each number in the provided list by the number provided in the second
-         parameter, and then return the updated list.
-         Use the ArrayList's replaceAll method to iterate through the ArrayList and replace each value with its double
-         https://www.programiz.com/java-programming/library/arraylist/replaceall
-     */
+    public ArrayList<String> addIngredient(ArrayList<String> list, String item) {
+        list.add(item);
+        return list;
+    }
 
+    public ArrayList<String> removeIngredient(ArrayList<String> list, String item) {
+        list.remove(item);
+        return list;
+    }
 
-
-    /*
-        TODO: 3. Create a method named isEmpty that accepts one parameter:
-         - A list of strings
-         The method must return a boolean that indicates whether the provided list is empty or not
-     */
-
-
-
-    /*
-        TODO: 4. Create a method named addIngredient that accepts two parameters in this order:
-         - A list of strings
-         - A string
-         The method must add the second parameter into the list provided and then return the list
-     */
-
-
-
-    /*
-        TODO: 5. Create a method named removeIngredient that accepts two parameters in this order:
-         - A list of strings
-         - A string
-         The method must remove the second parameter from the list and then return the list
-     */
-
-
-
-    /*
-        TODO: 6. Create a method named containsIngredient that accepts two parameters in this order:
-         - A list of strings
-         - A string
-         The method must return a boolean that indicates whether the second parameter exists in the provided list
-     */
-
-
-
+    public boolean containsIngredient(ArrayList<String> list, String item) {
+        return list.contains(item);
+    }
 }
